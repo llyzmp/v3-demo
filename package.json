@@ -11,12 +11,15 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "hasky": "^3.0.2",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@types/node": "^18.7.2",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "@vitejs/plugin-vue": "^3.0.0",
