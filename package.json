@@ -2,19 +2,47 @@
   "name": "v3-demo",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:eslint": "eslint --fix --ext .js,.ts,.vue,.tsx ./src",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install"
   },
   "dependencies": {
+    "hasky": "^3.0.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
     "@vitejs/plugin-vue": "^3.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
+    "vite-plugin-eslint": "^1.8.0",
+    "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "^0.38.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "pnpm run lint:eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
