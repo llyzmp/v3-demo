@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
+    "build:test": "vue-tsc --noEmit && vite build --mode test",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue,.tsx ./src",
@@ -15,6 +16,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "hasky": "^3.0.2",
+    "pinia": "^2.0.18",
+    "sass": "^1.54.4",
     "vue": "^3.2.37",
     "vue-router": "^4.0.13"
   },
@@ -33,6 +36,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
