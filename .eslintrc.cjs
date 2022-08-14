@@ -54,6 +54,7 @@ module.exports = {
     'vue/multi-word-component-names': 'off', // 是否开启组件命名规则校验（强制多个单词以驼峰或'-'链接的命名规则）
     // ESLint
     'no-use-before-define': 'off', // 禁止在变量定义之前使用它们
-    'space-before-function-paren': 'off' // 强制在 function的左括号之前使用一致的空格
+    'space-before-function-paren': 'off', // 强制在 function的左括号之前使用一致的空格
+    'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
 }
